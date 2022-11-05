@@ -52,7 +52,7 @@ User()
 
 # Menu and infos
 def Menu():
-    print("""\033[01m\033[30m\033[43mm*************************************************** ARRAY MENU ***************************************************\033[0m
+    print("""\033[01m\033[30m\033[43m*************************************************** ARRAY MENU ***************************************************\033[0m
     Choose what do you want to do with your \033[01mArray\033[0m:
         \033[31m1 -> Add an element\033[0m
         \033[32m2 -> Insert an element\033[0m
@@ -85,6 +85,7 @@ def ans():
         pos = int(input("\033[32mEnter the index you wish to put the number (starting from 0): \033[0m"))
         newnum = int(input("\033[32mEnter the number you wish to add: \033[0m"))
         list1.insert(pos, newnum)
+        print(f"\033[46m\033[30m{list1}\033[0m")
         while True: 
             ans = input("\n\033[33mDo you wish to continue?: \033[0m")
             if ans == "YES".islower():
@@ -100,6 +101,7 @@ def ans():
         list1.pop(index)
         mod = int(input("\033[33mReplace it with: \033[0m"))
         list1.insert(index, mod)
+        print(f"\033[46m\033[30m{list1}\033[0m")
         while True: 
             ans = input("\n\033[33mDo you wish to continue?: \033[0m")
             if ans == "YES".lower():
@@ -113,6 +115,7 @@ def ans():
     elif Choice == 4:
         delete = int(input("\033[34mWhat is number you wish to delete?: \033[0m"))
         list1.remove(delete)
+        print(f"\033[46m\033[30m{list1}\033[0m")
         while True: 
             ans = input("\n\033[33mDo you wish to continue?: \033[0m")
             if ans == "YES".lower():
@@ -126,6 +129,7 @@ def ans():
     elif Choice == 5:
         list1.sort()
         print(list1)
+        print(f"\033[46m\033[30m{list1}\033[0m")
         while True: 
             ans = input("\n\033[33mDo you wish to continue?: \033[0m")
             if ans == "YES".lower():
@@ -139,6 +143,7 @@ def ans():
     elif Choice == 6:
         list1.sort(reverse=True)
         print(list1)
+        print(f"\033[46m\033[30m{list1}\033[0m")
         while True: 
             ans = input("\n\033[33mDo you wish to continue?: \033[0m")
             if ans == "YES".lower():

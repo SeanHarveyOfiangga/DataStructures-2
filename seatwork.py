@@ -70,9 +70,20 @@ def ans():
         else:
             bye()
     elif Choice == 2:
-        pos = int(input("Enter where do you wish to put the number (starting from 0): "))
+        pos = int(input("Enter the index you wish to put the number (starting from 0): "))
         newnum = int(input("Enter the number you wish to add: "))
         list1.insert(pos, newnum)
+        print(list1)
+        ans = input("Do you wish to continue?: ")
+        if ans == "YES".lower():
+            Menu()
+        else:
+            bye()
+    elif Choice == 3:
+        index = int(input("What is the index of the number you wish to modify? (Starting form 0): "))
+        list1.pop(index)
+        mod = int(input("Replace it with: "))
+        list1.insert(index, mod)
         print(list1)
         ans = input("Do you wish to continue?: ")
         if ans == "YES".lower():

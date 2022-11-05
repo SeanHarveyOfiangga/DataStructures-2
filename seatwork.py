@@ -34,15 +34,46 @@
 def Intro():
     print("Welcome to my array program!")
 Intro()
-#User input
 
+#User input
+list1 = []
 def User():
-    list1 = []
     for i in range(10):
         content = int(input("\nPlease enter 10 random numbers: "))
         list1.append(content)
-        print(list1)
-    print(f"\nYou picked {list1}")
+    print(f"\nYou picked {list1}\n")
     return list1
 User()
+
+def Menu():
+    print(""" *************************************************** ARRAY MENU ***************************************************
+    Choose what do you want to do with your Array:
+        1 -> Add an element
+        2 -> Insert an element
+        3 -> Modify an element
+        4 -> Delete an element
+        5 -> Arrange in ascending order
+        6 -> Arrange in descending order""")
+    global Choice
+    Choice = int(input("What do you want to do: "))
+    ans()
+
+
+
+def ans():
+    if  Choice == 1:
+        list1.append(int(input("\nEnter the number you would like to add: ")))
+        print(list1)
+        ans = input("Do you wish to continue?: ")
+        if ans == "YES".lower():
+            Menu()
+        else:
+            bye()
+    else:
+        return
+
+def bye():
+    print("Thank you for using my program ^^")      
+
+Menu()           
     

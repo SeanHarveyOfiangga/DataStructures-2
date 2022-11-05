@@ -69,8 +69,16 @@ def ans():
             Menu()
         else:
             bye()
-    else:
-        return
+    elif Choice == 2:
+        pos = int(input("Enter where do you wish to put the number (starting from 0): "))
+        newnum = int(input("Enter the number you wish to add: "))
+        list1.insert(pos, newnum)
+        print(list1)
+        ans = input("Do you wish to continue?: ")
+        if ans == "YES".lower():
+            Menu()
+        else:
+            bye()
 
 def bye():
     print("Thank you for using my program ^^")      

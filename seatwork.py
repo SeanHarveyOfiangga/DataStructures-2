@@ -61,6 +61,7 @@ def Menu():
 
 
 def ans():
+    print(list1)
     if  Choice == 1:
         list1.append(int(input("\nEnter the number you would like to add: ")))
         print(list1)
@@ -90,7 +91,15 @@ def ans():
             Menu()
         else:
             bye()
-
+    elif Choice == 4:
+        delete = int(input("What is number you wish to delete?: "))
+        list1.remove(delete)
+        print(list1)
+        ans = input("Do you wish to continue?: ")
+        if ans == "YES".lower():
+            Menu()
+        else:
+            bye()
 def bye():
     print("Thank you for using my program ^^")      
 
